@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnet de Vacunación - {{ mascota.nombre }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/carnet_mascota.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Carnet de Vacunación de {{ mascota.nombre }}</h1>
+        </header>
+        
+        <section class="mascota-info">
+            <div class="info-group">
+                <p><strong>Especie:</strong> {{ mascota.especie }}</p>
+                <p><strong>Raza:</strong> {{ mascota.raza }}</p>
+            </div>
+            <div class="info-group">
+                <p><strong>Fecha de nacimiento:</strong> {{ mascota.fecha_nacimiento }}</p>
+                <p><strong>Propietario:</strong> {{ mascota.propietario }}</p>
+            </div>
+            <p><strong>Cédula del propietario:</strong> {{ cedula_propietario }}</p>
+        </section>
+
+        <h2 class="subtitle">Historial de Vacunación</h2>
+        {% if historial_vacunas %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Vacuna</th>
+                        <th>Fecha de aplicación</th>
+                        <th>Estado</th>
+                        <th>Próxima vacuna</th>
+                        <th>Notas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for vacuna in historial_vacunas %}
+                        <tr>
+                            <td>{{ vacuna.vacuna.nombre }}</td>
+                            <td>{{ vacuna.fecha_aplicacion }}</td>
+                            <td>{{ vacuna.get_estado_display }}</td>
+                            <td>
+                                {% if vacuna.fecha_proxima %}
+                                    {{ vacuna.fecha_proxima }}
+                                    {% if vacuna.dias_restantes > 0 %}
+                                        (en {{ vacuna.dias_restantes }} días)
+                                    {% elif vacuna.dias_restantes == 0 %}
+                                        (hoy)
+                                    {% else %}
+                                        (atrasada)
+                                    {% endif %}
+                                {% else %}
+                                    No programada
+                                {% endif %}
+                            </td>
+                            <td>{{ vacuna.notas|default_if_none:"" }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p class="no-records">No hay registros de vacunación para esta mascota.</p>
+        {% endif %}
+        
+        <div class="button-container">
+            <a href="{% url 'consultar_carnet' %}" class="button">Volver</a>
+            <a href="{% url 'descargar_carnet_pdf' mascota_id=mascota.id %}" class="button download-button">Descargar PDF</a>
+        </div>
+    </div>
+</body>
+</html>

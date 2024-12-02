@@ -1,0 +1,144 @@
+/* consultar_carnet.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:#f9f9f9; /* Verde muy suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la pantalla */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+    background: #ffffff; /* Fondo blanco */
+    border: 2px solid #a0bffc; /* Verde claro */
+    border-radius: 12px;
+    box-shadow: 2 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px; /* Limita el tamaño total del formulario */
+    display: flex;
+    flex-direction: row; /* Alinea la imagen y los campos en línea */
+    gap: 1rem; /* Espacio entre la imagen y el formulario */
+    align-items: center;
+}
+
+.form-content {
+    flex: 1; /* Asegura que los campos ocupen espacio proporcional */
+}
+
+.image-container {
+    flex: 1; /* Asegura que la imagen ocupe espacio proporcional */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #30bdbc;/* Verde oscuro */
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #065f46; /* Verde oscuro */
+    text-align: left;
+}
+
+input[type="number"] {
+    width: calc(100% - 1rem);
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 2px solid #6ee7b7; /* Verde claro */
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #10b981; /* Verde intermedio */
+    box-shadow: 0 0 6px rgba(16, 185, 129, 0.5);
+}
+
+button {
+    background-color: #22c55e; /* Verde medio */
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #16a34a; /* Verde más oscuro */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    text-align: left;
+}
+
+ul li {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: #f0fdf4; /* Verde muy claro */
+    border: 1px solid #d1fae5; /* Verde pálido */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #d1fae5; /* Verde pálido más resaltado */
+}
+
+ul li a {
+    text-decoration: none;
+    color: #065f46; /* Verde oscuro */
+    font-weight: bold;
+}
+
+p {
+    margin-top: 1rem;
+    color: #ef4444; /* Rojo suave */
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #065f46; /* Verde oscuro */
+    margin-bottom: 1rem;
+}
+
+/* Botón Cancelar */
+.cancel-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    background-color: #ef4444; /* Rojo suave */
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 40%; /* Se adapta al ancho del formulario */
+}
+
+.cancel-button:hover {
+    background-color: #dc2626; /* Rojo más oscuro */
+}

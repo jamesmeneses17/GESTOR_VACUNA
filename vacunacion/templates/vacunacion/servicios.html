@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios</title>
+    {% load static %}
+    <!-- Cargar el tag static -->
+    <link rel="stylesheet" href="{% static 'css/servicios.css' %}" />
+  </head>
+
+  <body>
+    <!-- Navegador flotante -->
+    <header class="floating-header">
+      <div class="container">
+        <div class="logo">
+          <img src="{% static 'img/logo.jpg' %}" alt="Logo" />
+          <span>Gestor de Vacunas</span>
+        </div>
+        <div class="menu-toggle">☰</div>
+        <!-- Botón de menú móvil -->
+        <nav>
+          <ul>
+            <li><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li><a href="{% url 'servicios' %}">Servicios</a></li>
+            <li><a href="{% url 'nosotros' %}">Sobre Nosotros</a></li>
+            <li><a href="/admin/">Panel Administrativo</a></li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.facebook.com"
+                target="_blank"
+              >
+                <img
+                  class="facebook-icon"
+                  src="{% static 'img/logo_facebook.png' %}"
+                  alt="Facebook"
+                />
+              </a>
+              <a
+                class="nav-link"
+                href="https://www.instagram.com"
+                target="_blank"
+              >
+                <img
+                  class="instagram-icon"
+                  src="{% static 'img/icono_instagram.png' %}"
+                  alt="Instagram"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Sección de vacunación veterinaria para perros -->
+    <section class="vacunacion-veterinaria">
+      <div class="vacunacion-container">
+        <!-- Contenedor de texto -->
+        <div class="vacunacion-text">
+          <h1>Vacunación veterinaria</h1>
+          <p>
+            Las <strong>vacunas</strong> son la forma más efectiva para luchar
+            contra ciertas enfermedades...
+          </p>
+          <p>
+            Las <strong>consultas de vacunación</strong> en clínicas siempre se
+            realizarán:
+          </p>
+          <ul>
+            <li>Una exploración física general previa.</li>
+            <li>
+              Se elegirá la <strong>vacuna específica</strong> para tu
+              mascota...
+            </li>
+          </ul>
+
+          <!-- Texto explicativo para el registro -->
+          <p class="nuevo-usuario-text">
+            Si aún no te has registrado, por favor
+            <strong>regístrate</strong> antes de solicitar una cita. Esto nos
+            ayudará a procesar tu información de manera más rápida y eficiente.
+          </p>
+
+          <!-- Botón de registro y botón de WhatsApp -->
+          <div class="button-container">
+            <button class="btn-cita">
+              <a
+              href="{% url 'consultar_carnet' %}"
+                style="color: white; text-decoration: none"
+              >
+              Ver Carnet de Vacunación
+              </a>
+            </button>
+
+            <!-- Enlace de WhatsApp con el icono y el texto "PIDE TU CITA YA" -->
+            <a
+            href="{% url 'registrar_cita' %}"
+              class="btn-whatsapp"
+            >
+              
+            Reserva tu Cita
+            </a>
+          </div>
+        </div>
+
+        <!-- Contenedor de imagen -->
+        <div class="vacunacion-imagen">
+          <img
+            src="{% static 'img/vacuna_perro.jpg' %}"
+            alt="Vacuna para perro"
+          />
+        </div>
+      </div>
+    </section>
+
+    <hr class="custom-hr" />
+
+    <!-- Sección de protocolo de vacunación para gatos -->
+    <!-- Sección de protocolo de vacunación para gatos -->
+    <section class="protocolo-vacunacion-gatos">
+      <div class="protocolo-container">
+        <!-- Contenedor de texto -->
+        <div class="protocolo-text">
+          <h1>Protocolo de vacunación para gatos</h1>
+          <p>
+            Existen tantas pautas de vacunación para gatos como veterinarios.
+            Pero en cualquier caso, nuestros veterinarios recomiendan poner las
+            siguientes vacunas:
+          </p>
+
+          <!-- Lista de vacunas con funcionalidad interactiva -->
+          <!-- Vacuna 1 -->
+          <div class="vacuna-item">
+            <button class="vacuna-toggle">
+              Vacuna Trivalente para gatos <span>+</span>
+            </button>
+            <div class="vacuna-detalles">
+              <p>
+                Protege contra enfermedades respiratorias virales, incluyendo
+                herpesvirus y calicivirus.
+              </p>
+            </div>
+          </div>
+
+          <!-- Vacuna 2 -->
+          <div class="vacuna-item">
+            <button class="vacuna-toggle">
+              Vacuna Leucemia Felina <span>+</span>
+            </button>
+            <div class="vacuna-detalles">
+              <p>
+                Protege a tu gato contra el virus de la leucemia felina, una
+                enfermedad contagiosa que afecta a su sistema inmunológico.
+              </p>
+            </div>
+          </div>
+
+          <!-- Vacuna 3 -->
+          <div class="vacuna-item">
+            <button class="vacuna-toggle">
+              Vacuna Antirrábica gato <span>+</span>
+            </button>
+            <div class="vacuna-detalles">
+              <p>
+                Previene la rabia, una enfermedad mortal para los animales y los
+                seres humanos.
+              </p>
+            </div>
+          </div>
+
+          <!-- Vacuna 4 -->
+          <div class="vacuna-item">
+            <button class="vacuna-toggle">
+              Vacuna anual gatos <span>+</span>
+            </button>
+            <div class="vacuna-detalles">
+              <p>
+                Refuerza las defensas de tu gato contra enfermedades comunes
+                anualmente.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contenedor de imagen -->
+        <div class="protocolo-imagen">
+          <img
+            src="{% static 'img/calendario_gato.webp' %}"
+            alt="Calendario de vacunación para gatos"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de protocolo de vacunación para perros -->
+    <section class="protocolo-vacunacion-perros">
+      <div class="protocolo-container">
+        <!-- Contenedor de texto -->
+        <div class="protocolo-text">
+          <h1>Protocolo de vacunación para perros</h1>
+          <p>
+            Las vacunas para perros les protegen de diferentes enfermedades que
+            pueden ser peligrosas para su salud. Aunque no son obligatorias, sí
+            hay una serie de vacunas esenciales que protegerán a tu compañero de
+            problemas más graves:
+          </p>
+
+          <!-- Lista de vacunas con funcionalidad interactiva -->
+          <!-- Vacuna 1 -->
+          <div class="vacuna-item">
+            <button class="vacuna-toggle">
+              Vacuna Monovalente o Bivalente para cachorros <span>+</span>
+            </button>
+            <div class="vacuna-detalles">
+              <p>Protege a perros y perras de: Parvovirus y Moquillo.</p>
+            </div>
+          </div>
+
+          <!-- Vacuna 2 -->
+          <div class="vacuna-item">
+            <button class="vacuna-toggle">
+              Vacuna Tetravalente Canina (Polivalente) <span>+</span>
+            </button>
+            <div class="vacuna-detalles">
+              <p>
+                Protege contra enfermedades comunes como Parvovirus, Moquillo,
+                Leptospirosis, etc.
+              </p>
+            </div>
+          </div>
+
+          <!-- Vacuna 3 -->
+          <div class="vacuna-item">
+            <button class="vacuna-toggle">
+              Vacuna Pentavalente Canina <span>+</span>
+            </button>
+            <div class="vacuna-detalles">
+              <p>Amplía la protección a enfermedades respiratorias.</p>
+            </div>
+          </div>
+
+          <!-- Vacuna 4 -->
+          <div class="vacuna-item">
+            <button class="vacuna-toggle">
+              Vacuna Antirrábica <span>+</span>
+            </button>
+            <div class="vacuna-detalles">
+              <p>
+                Previene la rabia, una enfermedad mortal para perros y humanos.
+              </p>
+            </div>
+          </div>
+
+          <!-- Vacuna 5 -->
+          <div class="vacuna-item">
+            <button class="vacuna-toggle">
+              Vacuna anual perros <span>+</span>
+            </button>
+            <div class="vacuna-detalles">
+              <p>
+                Se recomienda para reforzar la inmunidad de tu perro cada año.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contenedor de imagen -->
+        <div class="protocolo-imagen">
+          <img
+            src="{% static 'img/calendario_perro.webp' %}"
+            alt="Calendario de vacunación para perros"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Botón grande centrado -->
+    <div class="info-btn-container">
+      <a
+        href="https://wa.me/573115504487?text=Hola%20me%20gustaría%20obtener%20más%20información%20sobre%20las%20vacunas%20para%20perros"
+        class="info-btn"
+      >
+        ¿Desea obtener más información?
+      </a>
+    </div>
+
+    <!-- Sección de ahorro en planes de salud -->
+    <section class="ahorro-vacunas">
+      <div class="ahorro-container">
+        <div class="ahorro-texto">
+          <h1>Ahorra en las vacunas con los planes de salud</h1>
+          <p>
+            Aprovecha los <strong>planes de salud</strong> Plan Prevention o
+            Prevenplus para ahorrar dinero en la cobertura de servicios de
+            medicina preventiva.
+          </p>
+          <p>
+            Ponte en contacto con nosotros independientemente de la mascota que
+            tengas. Nos encargaremos de sus vacunas y de mantener la salud de tu
+            animal.
+          </p>
+        </div>
+        <div class="ahorro-boton-container"></div>
+      </div>
+    </section>
+
+    <section class="preguntas-frecuentes">
+      <h1>Preguntas frecuentes sobre las vacunas para mascotas</h1>
+      <div class="preguntas-frecuentes-container">
+        <!-- Agrega este contenedor -->
+        <div class="pregunta-item">
+          <button class="pregunta-toggle">
+            ¿Es obligatorio vacunar a tu mascota? <span>+</span>
+          </button>
+          <div class="pregunta-detalles">
+            <p>
+              En Colombia, la vacuna contra la rabia es la única obligatoria,
+              excepto en algunas regiones.
+            </p>
+          </div>
+        </div>
+        <div class="pregunta-item">
+          <button class="pregunta-toggle">
+            ¿Las dosis de recuerdo son obligatorias? <span>+</span>
+          </button>
+          <div class="pregunta-detalles">
+            <p>
+              Las dosis de recuerdo ayudan a mantener la inmunidad de tu
+              mascota.
+            </p>
+          </div>
+        </div>
+        <div class="pregunta-item">
+          <button class="pregunta-toggle">
+            ¿Hay que vacunar a los roedores? <span>+</span>
+          </button>
+          <div class="pregunta-detalles">
+            <p>
+              No es común vacunar a los roedores, pero consulta con tu
+              veterinario.
+            </p>
+          </div>
+        </div>
+        <div class="pregunta-item">
+          <button class="pregunta-toggle">
+            He adoptado a un perro o gato, ¿debo vacunarlo? <span>+</span>
+          </button>
+          <div class="pregunta-detalles">
+            <p>Sí, es recomendable que vacunes a tu mascota adoptada.</p>
+          </div>
+        </div>
+        <div class="pregunta-item">
+          <button class="pregunta-toggle">
+            ¿Qué ocurre si no vacuno a mi mascota? <span>+</span>
+          </button>
+          <div class="pregunta-detalles">
+            <p>
+              Si no vacunas a tu mascota, aumenta el riesgo de enfermedades
+              graves.
+            </p>
+          </div>
+        </div>
+        <div class="pregunta-item">
+          <button class="pregunta-toggle">
+            ¿Cuáles son las reacciones más frecuentes tras la vacuna?
+            <span>+</span>
+          </button>
+          <div class="pregunta-detalles">
+            <p>
+              Reacciones comunes incluyen fiebre baja o cansancio, pero
+              desaparecen pronto.
+            </p>
+          </div>
+        </div>
+        <div class="pregunta-item">
+          <button class="pregunta-toggle">
+            ¿Qué pasa si pierdo la cartilla de vacunación? <span>+</span>
+          </button>
+          <div class="pregunta-detalles">
+            <p>
+              Si pierdes la cartilla, tu veterinario puede emitir una nueva
+              basada en los registros.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Cierra el contenedor aquí -->
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Gestor de Vacunas - Todos los derechos reservados.</p>
+        <p>
+          Síguenos en:
+          <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+          <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector("nav ul").classList.toggle("show");
+        });
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // Manejar el despliegue para vacunas y preguntas
+      const toggles = document.querySelectorAll(
+        ".vacuna-toggle, .pregunta-toggle"
+      );
+
+      toggles.forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          const details = toggle.nextElementSibling;
+          const isVisible = details.style.display === "block";
+
+          // Cambiar el símbolo más/menos
+          const symbol = toggle.querySelector("span");
+          symbol.textContent = isVisible ? "+" : "-";
+
+          // Alternar visibilidad
+          details.style.display = isVisible ? "none" : "block";
+        });
+      });
+    </script>
+  </body>
+</html>

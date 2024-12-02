@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nosotros</title>
+    {% load static %}
+    <!-- Cargar el tag static -->
+    <link rel="stylesheet" href="{% static 'css/nosotros.css' %}" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navegador flotante -->
+    <header class="floating-header">
+      <div class="container">
+        <div class="logo">
+          <img src="{% static 'img/logo.jpg' %}" alt="Logo" />
+          <span>Gestor de Vacunas</span>
+        </div>
+        <div class="menu-toggle">☰</div>
+        <!-- Botón de menú móvil -->
+        <nav>
+          <ul>
+            <li><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li><a href="{% url 'servicios' %}">Servicios</a></li>
+            <li><a href="{% url 'nosotros' %}">Sobre Nosotros</a></li>
+            <li><a href="/admin/">Panel Administrativo</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Sección de Conócenos -->
+    <section class="conocenos">
+      <div class="conocenos-container">
+        <h1>CONÓCENOS</h1>
+        <p>
+          Nuestro principal objetivo como gestores del sistema de vacunación
+          veterinaria en Mocoa, Putumayo, es velar por la salud y el
+          bienestar<br />
+          de las mascotas de nuestra comunidad. Nos enfocamos en proporcionar un
+          servicio de vacunación eficiente, accesible y confiable para todos.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sección de Capacitación y Entrenamiento -->
+    <section class="capacitacion">
+      <div class="capacitacion-container">
+        <div class="capacitacion-item">
+          <div class="icono">
+            <img src="{% static 'img/logo_libro.png' %}" alt="Capacitación" />
+          </div>
+          <div class="capacitacion-texto">
+            <h2>CAPACITACIÓN Y ENTRENAMIENTO</h2>
+            <p>
+              Contamos con un equipo altamente capacitado para garantizar que
+              cada mascota reciba la vacuna correcta en el momento adecuado.
+              Nuestro personal está en constante formación para asegurar el
+              manejo más avanzado y actualizado en el área de la vacunación
+              veterinaria.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Empatía y Comunicación Asertiva -->
+    <section class="capacitacion">
+      <div class="capacitacion-container">
+        <div class="capacitacion-item">
+          <div class="icono">
+            <img src="{% static 'img/logo_microfono.png' %}" alt="Empatía" />
+          </div>
+          <div class="capacitacion-texto">
+            <h2>EMPATÍA Y COMUNICACIÓN ASERTIVA</h2>
+            <p>
+              Sabemos lo importante que es para ti la salud de tu mascota. Por
+              eso, nos aseguramos de brindar una comunicación clara, precisa y
+              empática durante todo el proceso de vacunación, desde la consulta
+              inicial hasta el seguimiento.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Ayudas Diagnósticas -->
+    <section class="capacitacion">
+      <div class="capacitacion-container">
+        <div class="capacitacion-item">
+          <div class="icono">
+            <img
+              src="{% static 'img/logo_microscopio.png' %}"
+              alt="Ayudas Diagnósticas"
+            />
+          </div>
+          <div class="capacitacion-texto">
+            <h2>AYUDAS DIAGNÓSTICAS</h2>
+            <p>
+              Tenemos al alcance una variedad de equipos de diagnósticos
+              actualizados y el personal capacitado en su manejo para prestar
+              oportunamente los diferentes estudios como lo son los Rayos X,
+              Ecografía, Electrocardiografía, Exámenes de laboratorio,
+              Gastroscopía, Biopsias, Patologías, Citologías, entre otros.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Infraestructura -->
+    <section class="capacitacion">
+      <div class="capacitacion-container">
+        <div class="capacitacion-item">
+          <div class="icono">
+            <img
+              src="{% static 'img/logo_infrastructura.png' %}"
+              alt="Infraestructura"
+            />
+          </div>
+          <div class="capacitacion-texto">
+            <h2>INFRAESTRUCTURA</h2>
+            <p>
+              Nuestras instalaciones están diseñadas para brindar un ambiente
+              cómodo y seguro tanto para las mascotas como para sus dueños.
+              Disponemos de un área específica para la vacunación y seguimiento
+              médico de mascotas, garantizando un ambiente controlado y
+              higiénico.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Paciente Crítico -->
+    <section class="capacitacion">
+      <div class="capacitacion-container">
+        <div class="capacitacion-item">
+          <div class="icono">
+            <img
+              src="{% static 'img/logo_critico.png' %}"
+              alt="Paciente Crítico"
+            />
+          </div>
+          <div class="capacitacion-texto">
+            <h2>PACIENTE CRÍTICO</h2>
+            <p>
+              Aunque nuestro enfoque es la vacunación preventiva, también
+              estamos preparados para atender casos de emergencia o
+              complicaciones post-vacuna, con personal entrenado y equipo
+              adecuado para situaciones críticas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Lo que dicen nuestros clientes -->
+    <section class="testimonios">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div id="carouselTestimonios" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="testimonial-item">
+                  <p>
+                    "Quiero enviar un mensaje de agradecimiento con la atención
+                    recibida por mi mascota, felicitaciones por la entrega y la
+                    forma de atendernos."
+                  </p>
+                  <strong>- Leidy Yarce</strong><br />
+                  <small>Julio 2022</small>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonial-item">
+                  <p>
+                    "La atención súper bien, mil gracias por los cuidados con mi
+                    negrito, muy organizados en los procesos."
+                  </p>
+                  <strong>- Paola Andrea Monsalve</strong><br />
+                  <small>Julio 2022</small>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonial-item">
+                  <p>
+                    "Muchas gracias a todo el equipo de auxiliares y médicos
+                    veterinarios por la excelente y oportuna atención."
+                  </p>
+                  <strong>- Julia Amparo</strong><br />
+                  <small>Junio 2022</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="testimonial-item">
+                  <p>
+                    "Cómo siempre excelente la atención y el personal muy
+                    amable. Gracias por tan excelente servicio."
+                  </p>
+                  <strong>- Zamirna</strong><br />
+                  <small>Junio 2022</small>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonial-item">
+                  <p>
+                    "Me explicaron todo el proceso de vacunación de manera clara
+                    y atenta. Estoy muy agradecida."
+                  </p>
+                  <strong>- Luisa Martínez</strong><br />
+                  <small>Agosto 2024</small>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonial-item">
+                  <p>
+                    "Desde que empecé a llevar a mis gatos, me he sentido
+                    tranquila sabiendo que están en las mejores manos."
+                  </p>
+                  <strong>- Marta García</strong><br />
+                  <small>Octubre 2024</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Controles del carrusel -->
+        <a
+          class="carousel-control-prev"
+          href="#carouselTestimonios"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselTestimonios"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Sección Conoce a nuestro equipo médico -->
+    
+    <section class="equipo-medico">
+      <h2>Conoce a nuestro equipo médico</h2>
+      <div class="equipo-container">
+        <!-- Primer miembro del equipo -->
+        <div class="miembro-equipo">
+          <img src="{% static 'img/doctora.jpg' %}" alt="Dra. Ana González" />
+          <p><strong>Dra. Ana González</strong></p>
+          <p>Médica Veterinaria, MSc</p>
+        </div>
+
+        <!-- Segundo miembro del equipo -->
+        <div class="miembro-equipo">
+          <img src="{% static 'img/doctor.jpg' %}" alt="Dr. Juan Rodríguez" />
+          <p><strong>Dr. Juan Rodríguez</strong></p>
+          <p>Médico Veterinario, Especialista en Cirugía</p>
+        </div>
+
+        <!-- Tercer miembro del equipo -->
+        <div class="miembro-equipo">
+          <img src="{% static 'img/doc.jpg' %}" alt="Dra. María Pérez" />
+          <p><strong>Dra. María Pérez</strong></p>
+          <p>Médica Veterinaria, Especialista en Medicina Interna</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Horarios Atención, Urgencias 24/7 y Medios de Pago -->
+    <!-- Sección de Horarios Atención, Urgencias y Medios de Pago -->
+    <section class="informacion">
+      <div class="container-informacion">
+        <div class="info-item">
+          <h3>HORARIOS ATENCIÓN</h3>
+          <p>
+            Nuestros servicios requieren programación de citas, la cual puede
+            ser asignada por nuestros canales de WhatsApp al
+            <strong>+57 3115504487</strong>.
+          </p>
+          <p><strong>LUNES A DOMINGO:</strong> 7:00am - 8:30pm</p>
+        </div>
+        <div class="info-item">
+          <h3>URGENCIAS 24/7</h3>
+          <p>
+            La atención prioritaria por traumas, intoxicación, cuerpos extraños,
+            convulsiones, deshidratación y demás situaciones de emergencia no
+            requieren de una cita previamente programada.
+          </p>
+          <p><strong>LUNES A DOMINGO:</strong> 24 Horas</p>
+        </div>
+        <div class="info-item">
+          <h3>MEDIOS DE PAGO</h3>
+          <p>Efectivo</p>
+          <p>Todas las tarjetas débito y/o crédito</p>
+          <p>Transferencias y consignaciones interbancarias</p>
+          <p>Código QR Bancolombia</p>
+          <p>Sistecrédito</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Gestor de Vacunas - Todos los derechos reservados.</p>
+        <p>
+          Síguenos en:
+          <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+          <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector("nav ul").classList.toggle("show");
+        });
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

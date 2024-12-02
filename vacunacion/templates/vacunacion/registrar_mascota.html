@@ -1,0 +1,53 @@
+<!-- templates/registrar_mascota.html -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar Mascota</title>
+    <link rel="stylesheet" href="{% static 'css/registro_mascota.css' %}" />
+  </head>
+  <body>
+    <div class="form-container">
+      <!-- Sección izquierda: formulario -->
+      <div class="left-section">
+        <div class="form-content">
+          <h1>Registrar Mascota</h1>
+
+          <!-- Mensaje de éxito después de guardar -->
+          {% if mensaje %}
+          <div class="success-message">
+            <p>{{ mensaje }}</p>
+          </div>
+          <script>
+            setTimeout(function () {
+              document.querySelector(".success-message").style.display = "none";
+              window.location.href = "{% url 'servicios' %}";
+            }, 5000); // 5000 ms = 5 segundos
+          </script>
+          {% endif %}
+
+          <form method="post">
+            {% csrf_token %}
+            <div class="input-group">
+              {{ form.as_p }}
+            </div>
+            <button type="submit" class="btn-submit">Guardar</button>
+
+            <p class="info-message">
+              Recuerda que este registro solo se realiza una vez. Para programar
+              una cita para tu mascota, puedes hacerlo fácilmente a través de
+              nuestro número de WhatsApp.
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Sección derecha: imagen -->
+      <div class="right-section">
+        <img src="{% static 'img/registro_mascota.jpg' %}" alt="Fondo de mascota" />
+      </div>
+    </div>
+  </body>
+</html>

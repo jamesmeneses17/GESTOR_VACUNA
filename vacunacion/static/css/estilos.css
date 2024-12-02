@@ -1,0 +1,692 @@
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column; 
+}
+
+/* Contenedor de los botones */
+.button-container {
+  display: flex;
+  gap: 20px; 
+  align-items: center; 
+  margin-top: 20px; 
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 50px; 
+  height: 50px;
+  bottom: 120px; 
+  right: 30px; 
+  z-index: 1000; 
+  background-color: #25d366; 
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-float img {
+  width: 80%;
+  height: auto;
+}
+/* Estilo para la sección de contacto */
+.contact-section {
+  background-color: #ffffff; 
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Contenedor para la imagen y la información */
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+
+/* Estilos para la imagen del mapa */
+.contact-map {
+  flex: 1;
+  display: flex; 
+  justify-content: center; 
+}
+
+.contact-map img {
+  width: 100%;
+  max-width: 350px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  cursor: pointer;
+}
+
+/* Estilos para la información de contacto */
+.contact-info {
+  flex: 1;
+  text-align: left; 
+  margin-top: 20px;
+}
+
+.contact-section h2 {
+  font-size: 2.5em; 
+  color: #30bdbc;
+  margin-bottom: 20px;
+}
+
+.contact-info h3 {
+  color: #221d55;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  text-align: center; 
+}
+
+.contact-info p {
+  color: #5f5b84;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.contact-info p:before {
+  content: "📍"; 
+  margin-right: 10px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; 
+  }
+
+  .contact-info {
+    text-align: center; 
+  }
+  .contact-map img {
+    max-width: 280px; 
+  }
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float img {
+    width: 70%;
+  }
+}
+
+/* Header flotante */
+.floating-header {
+  background-color: white;
+  padding: 10px 0;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor principal de la sección */
+.why-choose-us {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 20px;
+  background-color: transparent; 
+  border-radius: 10px;
+  box-shadow: none; 
+}
+
+/* Ajusta la imagen circular */
+.why-choose-us .image-container img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 50%; 
+  background-color: transparent; 
+  border: none; 
+  box-shadow: none; 
+}
+
+.why-choose-us .image-container {
+  background-color: transparent;
+  border: none; 
+  box-shadow: none; 
+  padding: 0; 
+}
+
+/* Ajusta el texto */
+.why-choose-us .content-container {
+  flex: 1;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* Centrar el título */
+.why-choose-us h2 {
+  font-size: 2.2em;
+  color: #30bdbc;
+  margin-bottom: 20px;
+}
+
+/* Ajuste de los párrafos */
+.why-choose-us p {
+  font-size: 1.1em;
+  color: #5f5b84;
+  line-height: 1.6;
+}
+
+.why-choose-us .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; 
+}
+
+/* Contenedor de la imagen */
+.image-container {
+  width: 40%; 
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo de la imagen */
+.team-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor del texto */
+.text-container {
+  width: 55%; /* Ocupa el 55% del ancho */
+}
+
+/* Estilo del título */
+.text-container h2 {
+  color: #701696;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Estilo de los párrafos */
+.text-container p {
+  color: #605c84;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Sección de contenido para el cuidado de tu mascota */
+/* Contenedor principal de las tarjetas */
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+.content-section {
+  background-color: #dcf8f8; 
+  padding: 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; 
+  margin-bottom: 0; 
+}
+.content-section h2 {
+  color: #30bdbc;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+/* Estilos para las tarjetas */
+.content-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px; 
+  flex-wrap: wrap; 
+  margin-bottom: -30px; 
+}
+
+/* Tarjetas individuales */
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  text-align: center;
+}
+
+/* Imagen dentro de la tarjeta */
+.card img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card a {
+  font-size: 1em;
+  color: #30bdbc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+/* Estilos para las olas */
+.wave {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: -50px; 
+}
+
+.wave svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Efectos hover */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de Bienvenida */
+.welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+  text-align: center; 
+  padding: 20px; 
+  margin: 0 auto; 
+  max-width: 900px; 
+  background-color: #ffffff; 
+  border-radius: 0; 
+  box-shadow: none; 
+}
+
+.welcome-section h1 {
+  color: #30bdbc;
+  font-size: 2.5em; 
+  margin-bottom: 40px; 
+  margin-top: 40px; 
+}
+
+.welcome-section p {
+  font-family: "Segoe UI";
+  color: #605c84; 
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  max-width: 800px; 
+}
+
+.welcome-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: transparent; 
+  border-radius: 0; 
+  box-shadow: none; 
+}
+
+.welcome-container h1 {
+  color: #2a9d8f;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.welcome-container p {
+  color: #5f5b84;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.custom-hr {
+  border: none;
+  border-top: 1px solid #c2b9b9; 
+  margin: 20px auto; 
+  width: 60%; 
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilos del nav */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+/* Botón de menú móvil */
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Banner */
+.banner {
+  background-color: #29718a; 
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-left: 20px; 
+  padding-right: 20px;
+  margin: 20px auto; 
+  max-width: 1270px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.container {
+  width: 100%; /* Permite que el contenido ocupe todo el ancho disponible */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo del contenido dentro del banner */
+.banner-content {
+  color: white;
+  width: 50%;
+}
+
+.banner h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.image-banner-container {
+  width: 100%; 
+  max-width: 1270px; 
+  margin: 20px auto;
+  border-radius: 10px; 
+  overflow: hidden; 
+}
+
+.image-banner-container img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Estilo del botón dentro del banner */
+.banner button {
+  background-color: #30bdbc; 
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para el botón */
+.banner button:hover {
+  background-color: #17a589; 
+}
+
+/* Imagen del banner */
+.banner-image {
+  width: 50%;
+  text-align: right;
+}
+
+.banner-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #221d55;
+  color: white;
+  padding: 7px 0; 
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+footer a {
+  color: #ffeb3b;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Estilos individualizados para cada ícono */
+.facebook-icon {
+  width: 60px; 
+  height: 60px;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+
+.instagram-icon {
+  width: 60px; 
+  height: 40px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* Ajustes adicionales para mantener la consistencia */
+.nav-item .nav-link img:hover {
+  opacity: 0.8; /* Efecto de hover */
+}
+
+/* Asegurar que se mantenga el formato responsive */
+/* Asegurar que se mantenga el formato responsive */
+
+@media (max-width: 768px) {
+  .contact-map img {
+    max-width: 280px; 
+  }
+  .contact-container {
+    flex-direction: column; 
+  }
+
+  .contact-info {
+    text-align: center; 
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .banner {
+    flex-direction: column;
+    padding-top: 120px;
+  }
+
+  .banner-content,
+  .banner-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner h1 {
+    font-size: 2em;
+  }
+
+  /* Ajustes para íconos en pantallas pequeñas */
+  .facebook-icon,
+  .instagram-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Nuevos estilos responsive para ¿Por qué elegir nuestra veterinaria? */
+  .why-choose-us {
+    max-width: 600px; 
+    padding: 15px;
+  }
+
+  .why-choose-us .image-container img {
+    max-width: 150px; 
+  }
+
+  .why-choose-us h2 {
+    font-size: 1.8em; 
+  }
+
+  .why-choose-us p {
+    font-size: 1em; 
+  }
+  .why-choose-us .content {
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+  }
+
+  .why-choose-us .image-container {
+    margin-bottom: 20px; 
+  }
+  .content-cards {
+    justify-content: center; 
+  }
+
+  .card {
+    width: 100%; 
+    max-width: 300px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .logo img {
+    height: 30px;
+  }
+
+  .banner h1 {
+    font-size: 1.8em;
+  }
+
+  .banner-content {
+    text-align: center;
+  }
+
+  /* Nuevos estilos para pantallas pequeñas */
+  .why-choose-us {
+    max-width: 100%; 
+    padding: 10px;
+  }
+
+  .why-choose-us .image-container img {
+    max-width: 120px;
+  }
+  .why-choose-us h2 {
+    font-size: 1.5em; 
+  }
+
+  .why-choose-us p {
+    font-size: 0.9em; 
+  }
+}

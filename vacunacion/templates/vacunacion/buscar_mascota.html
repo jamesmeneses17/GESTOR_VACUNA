@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Mascota</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </head>
+  <body>
+    <h1>Buscar Mascota</h1>
+    <form method="get">
+      {{ form.as_p }}
+      <button type="submit">Buscar</button>
+    </form>
+
+    {% if mascota %}
+      <h2>Mascota Encontrada</h2>
+      <p>Nombre: {{ mascota.nombre }}</p>
+      <p>Especie: {{ mascota.especie.nombre }}</p>
+      <p>Propietario: {{ propietario.nombre }} {{ propietario.apellido }}</p>
+      <a href="{% url 'carnet_mascota' mascota.id %}">Ver Carnet de Vacunación</a>
+    {% elif propietario %}
+      <h2>No se encontró una mascota asociada a esta cédula.</h2>
+    {% endif %}
+  </body>
+</html>

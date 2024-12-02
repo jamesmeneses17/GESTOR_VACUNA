@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Cita</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/registrar_cita.css' %}">
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                const messageContainer = document.querySelector('.success-message');
+                if (data.redirect) {
+                    messageContainer.textContent = data.mensaje;
+                    messageContainer.style.display = 'block';
+                    setTimeout(() => {
+                        window.location.href = "{% url 'servicios' %}";
+                    }, 6000); // Esperar 4 segundos antes de redirigir
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <div class="form-container">
+            <h1>Registrar Cita</h1>
+
+            <div class="success-message" style="display: none; color: green;"></div>
+
+            <form method="POST" onsubmit="handleFormSubmit(event)">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <!-- Botones -->
+                <div class="form-buttons">
+                    <button type="submit" class="submit-button">Agendar Cita</button>
+                    <a href="{% url 'servicios' %}" class="cancel-button">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

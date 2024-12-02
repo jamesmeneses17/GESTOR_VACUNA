@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header .title {
+    text-align: center;
+    font-size: 24px;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.mascota-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px; /* Agregado para separación entre elementos */
+    margin-bottom: 20px;
+}
+
+.info-group {
+    flex: 1 1 calc(50% - 20px); /* Ajusta el ancho al 50% menos el espacio */
+    margin-bottom: 10px;
+}
+
+.info-group p {
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.table th {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.no-records {
+    font-size: 14px;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px; /* Agregado para separación entre botones */
+    margin-top: 20px;
+}
+
+.button {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #007BFF;
+    font-size: 14px;
+    text-align: center;
+    flex: 1;
+    max-width: 200px; /* Límite máximo de ancho para los botones */
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.download-button {
+    background-color: #28a745;
+}
+
+.download-button:hover {
+    background-color: #218838;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header .title {
+        font-size: 20px;
+    }
+
+    .info-group {
+        flex: 1 1 100%; /* Ocupar todo el ancho disponible */
+        text-align: left;
+    }
+
+    .table th, .table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .title {
+        font-size: 18px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .table th, .table td {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .button {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    .info-group {
+        text-align: center;
+    }
+}

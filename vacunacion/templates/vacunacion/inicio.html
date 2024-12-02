@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Vacunas - Clínica Veterinaria</title>
+    {% load static %}
+
+    <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}" />
+  </head>
+  <body>
+    <!-- Navegador flotante -->
+    <header class="floating-header">
+      <div class="container">
+        <div class="logo">
+          <img src="{% static 'img/logo.jpg' %}" alt="Logo" />
+          <span>Gestor de Vacunas</span>
+        </div>
+        <div class="menu-toggle">☰</div>
+        <!-- Icono de menú para móvil -->
+        <nav>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="{% url 'servicios' %}">Servicios</a></li>
+            <li><a href="{% url 'nosotros' %}">Sobre Nosotros</a></li>
+            <li><a href="/admin/">Panel Administrativo</a></li>
+           
+            <!-- Botón de "Llenar Cita" agregado -->
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.facebook.com"
+                target="_blank"
+              >
+                <img
+                  class="facebook-icon"
+                  src="{% static 'img/logo_facebook.png' %}"
+                  alt="Facebook"
+                />
+              </a>
+              <a
+                class="nav-link"
+                href="https://www.instagram.com"
+                target="_blank"
+              >
+                <img
+                  class="instagram-icon"
+                  src="{% static 'img/icono_instagram.png' %}"
+                  alt="Instagram"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="content">
+      <section class="banner">
+        <div class="container">
+          <div class="banner-content">
+            <p>    
+               <h1>¿Eres nuevo en nuestro sistema?</h1>
+              <br>
+              ¡Bienvenido al mejor lugar para cuidar la salud de tu mascota! 
+              <br>
+              Registra a tu mascota y comienza a gestionar su calendario de
+              vacunación de manera fácil y segura. Mantén al día las vacunas
+              necesarias para protegerla de enfermedades y garantizar su
+              bienestar.
+            </p>
+            <button>  <a
+              href="{% url 'registrar_propietario' %}"
+              style="color: white; text-decoration: none"
+            >
+            ¡Regístrate ahora!
+            </a></button>
+          </div>
+          <div class="banner-image">
+            <img
+              src="{% static 'img/perro_baner.avif' %}"
+              alt="Perro vacunado"
+            />
+          </div>
+        </div>
+      </section>
+
+      <hr class="custom-hr" />
+
+      <!-- Título y párrafos centrados -->
+      <div class="welcome-section">
+        <h1>Bienvenidos a Animal Project</h1>
+      </div>
+      <section class="welcome-section">
+        <p>
+          En Animal Project, nos especializamos en la gestión integral de las
+          vacunas de tus mascotas. Sabemos lo importante que es su bienestar,
+          por lo que nuestro sistema está diseñado para ofrecerte una plataforma
+          fácil de usar donde podrás mantener el historial de vacunación de tus
+          compañeros peludos siempre actualizado.
+        </p>
+        <p>
+          Con nuestra plataforma, tendrás acceso a recordatorios automáticos
+          sobre próximas vacunas, así como un resumen detallado del estado de
+          las vacunas de tu mascota. Esto te permitirá garantizar que tu perro o
+          gato esté siempre protegido contra enfermedades prevenibles, todo
+          desde la comodidad de tu hogar.
+        </p>
+      </section>
+      <hr class="custom-hr" />
+
+      <!-- Imagen añadida debajo de los párrafos -->
+
+      <div class="image-banner-container">
+        <img src="{% static 'img/nuevo_baner.jpg' %}" alt="Imagen Carrusel" />
+      </div>
+
+      <hr class="custom-hr" />
+
+      <!-- Nueva sección: ¿Por qué elegir nuestra veterinaria? -->
+      <section class="why-choose-us">
+        <h2>¿Por qué elegir nuestra veterinaria?</h2>
+        <div class="content">
+          <div class="image-container">
+            <img
+              src="{% static 'img/equipo_veterinario.webp' %}"
+              alt="Equipo Veterinario"
+            />
+          </div>
+          <div class="content-container">
+            <p>
+              Nuestro equipo está comprometido con la salud y el bienestar de
+              tus mascotas, y sabemos que la vacunación es una de las
+              herramientas más importantes para protegerlas contra enfermedades
+              graves. En nuestra clínica, nos especializamos en ofrecer un
+              servicio de vacunación preciso y personalizado para cada mascota.
+            </p>
+            <p>
+              Al elegir nuestra clínica para la vacunación de tu mascota,
+              estarás eligiendo un servicio responsable y dedicado, con
+              profesionales capacitados que cuidan de su salud y bienestar en
+              cada etapa del proceso de vacunación.
+            </p>
+          </div>
+        </div>
+      </section>
+      <hr class="custom-hr" />
+
+      <!-- Nueva sección: Contenido para el cuidado de tu mascota -->
+
+      <section class="content-section">
+        <h2>Contenido para el cuidado de tu mascota</h2>
+        <div class="content-cards">
+          <div class="card">
+            <img src="{% static 'img/sobre_nosotros_3.jpg' %}" alt="Vacuna 1" />
+            <h3>Clínica Veterinaria 24 horas cerca de mí</h3>
+            <p>Clínica Veterinaria en el sector estadio, en Medellín.</p>
+          </div>
+          <div class="card">
+            <img src="{% static 'img/sobre_nosotros_3.jpg' %}" alt="Vacuna 2" />
+            <h3>Parvovirus Canino: Una Amenaza Silenciosa</h3>
+            <p>Requiere atención urgente las 24 horas.</p>
+          </div>
+          <div class="card">
+            <img src="{% static 'img/sobre_nosotros_3.jpg' %}" alt="Vacuna 3" />
+            <h3>Cuida a tus Mascotas en Navidad</h3>
+            <p>Medicina Preventiva Veterinaria contra la Pólvora.</p>
+          </div>
+          <div class="card">
+            <img src="{% static 'img/sobre_nosotros_3.jpg' %}" alt="Vacuna 4" />
+            <h3>Hospital veterinario 24 horas</h3>
+            <p>Excelencia en servicios veterinarios en Medellín.</p>
+          </div>
+        </div>
+      </section>
+      <hr class="custom-hr" />
+
+      <a
+        href="https://wa.me/573115504487"
+        target="_blank"
+        class="whatsapp-float"
+      >
+        <img src="{% static 'img/whatsapp-icon.png' %}" alt="WhatsApp" />
+      </a>
+
+      <!-- Nueva sección de contacto -->
+      <section class="contact-section">
+        <h2>Contacto Clínica Veterinaria 24 horas</h2>
+        <div class="contact-container">
+          <!-- Imagen de la ubicación -->
+          <div class="contact-map">
+            <img
+              src="{% static 'img/ubicacion.jpeg' %}"
+              alt="Ubicación Clínica"
+              class="map-image"
+              onclick="window.open('https://maps.app.goo.gl/hFChf5pmybQDGTW16')"
+            />
+          </div>
+
+          <!-- Información de contacto -->
+          <div class="contact-info">
+            <h3>Nuestra Sede</h3>
+            <p>Dirección: Calle 49B #68-18, Mocoa Putumayo, Colombia.</p>
+            <p>
+              Correo electrónico:
+              <a href="mailto:animalproject@gmail.com" target="_blank"
+                >animalproject@gmail.com</a
+              >
+            </p>
+            <p>
+              Línea de atención celular:
+              <a href="https://wa.me/573115504487" target="_blank"
+                >(+57) 311 550 4487</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Gestor de Vacunas - Todos los derechos reservados.</p>
+        <p>
+          Síguenos en:
+          <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+          <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector("nav ul").classList.toggle("show");
+        });
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

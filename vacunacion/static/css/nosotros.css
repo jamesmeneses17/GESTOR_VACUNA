@@ -1,0 +1,419 @@
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sección de Horarios Atención, Urgencias 24/7 y Medios de Pago */
+.informacion {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.container-informacion {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Diseño responsive */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; 
+}
+
+.info-item {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  padding: 30px;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.info-item h3 {
+  font-size: 24px;
+  color: #003a70;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.info-item p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Estilos para la sección de equipo médico */
+.equipo-medico {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.equipo-medico h2 {
+  font-size: 36px;
+  color: #0f2d42;
+  margin-bottom: 40px;
+}
+
+/* Contenedor de equipo */
+.equipo-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Diseño responsive */
+  gap: 30px;
+  justify-items: center; 
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos para cada miembro del equipo */
+.miembro-equipo {
+  text-align: center;
+}
+
+.miembro-equipo img {
+  max-width: 200px; 
+  width: 100%;
+  height: auto; 
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 15px; 
+}
+
+.miembro-equipo p {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.miembro-equipo p strong {
+  display: block;
+  font-size: 18px;
+  color: #003a70;
+  margin-bottom: 5px;
+}
+
+/* Estilos para la sección de testimonios */
+.testimonios {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+  padding-left: 20px; 
+  padding-right: 20px; 
+}
+
+/* Asegura que los items no estén pegados a los bordes */
+.carousel-item {
+  padding: 20px;
+}
+
+.testimonios h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #0f2d42;
+  font-weight: bold;
+}
+
+.testimonial-item {
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 15px;
+}
+.testimonial-item p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.testimonial-item strong {
+  font-size: 16px;
+  color: #0f2d42;
+}
+
+.testimonial-item small {
+  font-size: 14px;
+  color: #aaaaaa;
+}
+
+/* Ajustes del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #0f2d42;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* Cambiar el color del botón cuando se pase el mouse por encima */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: #007bff; 
+  transition: background-color 0.3s ease;
+}
+
+/* Estilos generales para la sección Conócenos */
+.conocenos {
+  background-color: #0f2d42;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.conocenos h1 {
+  font-size: 36px;
+  color: white;
+}
+
+.conocenos p {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #aaaaaa;
+}
+
+.section-conocenos h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.section-conocenos p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 800px; 
+  padding-top: 20px; 
+}
+
+/* Estilos para Capacitación y Entrenamiento */
+.capacitacion {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.capacitacion-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.capacitacion-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.capacitacion-item .icono img {
+  width: 60px;
+  height: 60px;
+}
+
+.capacitacion-item .capacitacion-texto h2 {
+  font-size: 24px;
+  color: #003a70;
+  margin-bottom: 10px;
+}
+
+.capacitacion-item .capacitacion-texto p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* Header flotante */
+
+/* Header flotante */
+.floating-header {
+  background-color: white;
+  padding: 30px 0;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.container {
+  width: 100%;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilos del nav */
+/* Estilos del nav */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; 
+  align-items: center;
+  justify-content: flex-end; 
+  margin-right: 10px; 
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+/* Botón de menú móvil */
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.facebook-icon {
+  width: 45px; 
+  height: 60px;
+  margin-left: 0px;
+  vertical-align: middle;
+}
+
+.instagram-icon {
+  width: 60px;
+  height: 40px;
+  margin-left: -10px;
+  vertical-align: middle;
+}
+
+/* Footer */
+footer {
+  background-color: #221d55;;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+footer a {
+  color: #ffeb3b;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Asegurar que se mantenga el formato responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column; 
+    display: none; 
+  }
+
+  nav ul.show {
+    display: flex; 
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .facebook-icon,
+  .instagram-icon {
+    width: 25px; 
+    height: 25px;
+    margin-left: 5px; 
+  }
+
+  .capacitacion-container {
+    grid-template-columns: 1fr;
+  }
+
+  .capacitacion-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .capacitacion-item .icono img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .capacitacion-item .capacitacion-texto h2 {
+    font-size: 24px;
+    color: #003a70;
+    margin-bottom: 10px;
+  }
+
+  .capacitacion-item .capacitacion-texto p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+  }
+  .testimonios {
+    padding-left: 10px; 
+    padding-right: 10px;
+  }
+
+  .testimonial-item {
+    margin-bottom: 20px;
+  }
+
+  .testimonios h2 {
+    font-size: 28px;
+  }
+  .equipo-container {
+    grid-template-columns: 1fr; 
+  }
+  .container-informacion {
+    grid-template-columns: 1fr;
+  }
+}

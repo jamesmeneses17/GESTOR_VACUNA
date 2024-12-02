@@ -1,0 +1,603 @@
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;;
+}
+/* Estilos para Preguntas Frecuentes */
+.preguntas-frecuentes {
+  padding: 50px 0;
+  text-align: center; 
+}
+.preguntas-frecuentes h1 {
+  color: #30bdbc;
+  font-size: 28px;
+  margin-bottom: 40px; 
+ }
+
+/* Contenedor para centrar las preguntas y limitar el ancho */
+.preguntas-frecuentes-container {
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
+}
+
+.pregunta-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left; 
+}
+
+.pregunta-toggle {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  color: #003a70;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none; 
+}
+
+.pregunta-detalles {
+  display: none;
+  padding: 10px;
+  font-size: 16px;
+  color: #003a70;
+}
+
+.pregunta-item.active .pregunta-detalles {
+  display: block;
+}
+
+.pregunta-item.active .pregunta-toggle span {
+  content: "-";
+}
+
+.pregunta-toggle span {
+  font-size: 24px; 
+  color: #1e88e5;
+  margin-left: 10px;
+}
+
+/* Estilos para la sección de ahorro en vacunas */
+.ahorro-vacunas {
+  padding: 50px 0;
+
+  text-align: center;
+}
+
+.ahorro-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.ahorro-texto h1 {
+  font-size: 2.5em;
+  color: #30bdbc;
+  margin-bottom: 20px;
+}
+
+.ahorro-texto p {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.ahorro-boton-container {
+  margin-top: 30px;
+}
+
+.ahorro-boton {
+  background-color: #0044cc;
+  color: white;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.ahorro-boton:hover {
+  background-color: #003399;
+}
+
+/* Contenedor para centrar el botón */
+.info-btn-container {
+  text-align: center;
+  margin: 40px 0; 
+}
+
+/* Estilo del botón grande y centrado */
+.info-btn {
+  background-color: #2477dc;
+  color: white;
+  padding: 15px 40px; 
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.info-btn:hover {
+  background-color: #27bc3b;
+}
+
+/* Protocolo de vacunación para gatos */
+.protocolo-vacunacion-gatos {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.protocolo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  gap: 70px;
+}
+
+.vacunacion-veterinaria {
+  padding-bottom: 20px; 
+  margin-bottom: 0; 
+}
+
+.protocolo-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Estilos para los botones de la lista de vacunación */
+.vacuna-item {
+  margin-bottom: 20px;
+}
+
+.vacuna-toggle {
+  width: 100%;
+  background-color: #94b552;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+.vacuna-toggle span {
+  position: absolute;
+  right: 15px;
+  font-size: 1.5em;
+}
+.vacuna-toggle:hover {
+  background-color: #003399;
+}
+.vacuna-detalles {
+  display: none; 
+  padding: 15px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.vacuna-detalles p {
+  margin: 0;
+}
+
+.protocolo-text h1 {
+  font-size: 2.5em;
+  color: #30bdbc;
+  margin-bottom: 20px;
+}
+
+.protocolo-text p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.protocolo-text ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.protocolo-text ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.protocolo-text ul li:before {
+  content: "🐱        "; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2em;
+}
+
+.protocolo-imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.protocolo-imagen img {
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor principal de la sección de vacunación */
+.vacunacion-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  gap: 10px; 
+}
+.custom-hr {
+  border: none;
+  border-top: 1px solid #c2b9b9; 
+  margin: 20px auto; 
+  width: 50%; 
+}
+
+/* Estilos del texto */
+.vacunacion-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.vacunacion-text h1 {
+  font-size: 2.5em;
+  color: #30bdbc; 
+}
+
+.vacunacion-text p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.vacunacion-text ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vacunacion-text ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.vacunacion-text ul li:before {
+  content: "🐾"; /* Icono de huella */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Botón de pedir cita */
+.btn-cita {
+  background-color: #0044cc;
+  color: white;
+  padding: 15px 30px; 
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em; 
+  cursor: pointer;
+  display: block; 
+  margin: 40px auto; 
+}
+
+.btn-cita:hover {
+  background-color: #003399;
+}
+
+/* Estilo general para dar más espacio a la sección de vacunación */
+.vacunacion-container {
+  margin-bottom: -70px; 
+}
+
+/* Estilos de la imagen */
+.vacunacion-imagen {
+  flex: 1;
+  text-align: center;
+  margin-top: -90px; 
+}
+
+.vacunacion-imagen img {
+  max-width: 400px;
+  border-radius: 10px;
+  /* Aumenta la sombra para hacerla más visible */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Header flotante */
+.floating-header {
+  background-color: white;
+  padding: 10px 0;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilos del nav */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; 
+  align-items: center;
+  justify-content: flex-end; 
+  margin-right: 10px;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Contenedor de los botones */
+.button-container {
+  display: flex;
+  gap: 20px; 
+  align-items: center; 
+  margin-top: 20px; 
+}
+
+/* Ajuste del botón */
+.btn-whatsapp {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #25d366; 
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.btn-whatsapp:hover {
+  background-color: #1ebe57;
+}
+
+.whatsapp-icon {
+  width: 40px; 
+  height: 40px;
+  margin-right: 10px; 
+}
+.btn-whatsapp:hover {
+  background-color: #128c7e;
+}
+
+
+nav ul li a:hover {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+/* Botón de menú móvil */
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+/* Estilo para el texto encima del botón */
+.nuevo-usuario-text {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left; 
+  max-width: 600px; 
+}
+
+/* Estilos para los iconos de redes sociales */
+
+
+/* Estilos individualizados para cada ícono */
+
+.facebook-icon {
+  width: 60px; 
+  height: 60px;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+
+.instagram-icon {
+  width: 60px; 
+  height: 40px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* Footer */
+footer {
+  background-color:#221d55;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+footer a {
+  color: #ffeb3b;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Asegurar que se mantenga el formato responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .facebook-icon,
+  .instagram-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .vacunacion-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .vacunacion-imagen {
+    margin-top: 20px; 
+  }
+
+  .vacunacion-imagen img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .btn-cita {
+    margin-bottom: 20px; 
+  }
+  .vacunacion-container {
+    margin-bottom: 30px; 
+  }
+  .protocolo-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .protocolo-imagen img {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  .info-btn {
+    font-size: 1.2em;
+    padding: 12px 30px;
+  }
+  .ahorro-texto h1 {
+    font-size: 2em;
+  }
+
+  .ahorro-texto p {
+    font-size: 1em;
+  }
+
+  .ahorro-boton {
+    font-size: 1.2em;
+    padding: 12px 24px;
+  }
+
+  .preguntas-frecuentes-container {
+    max-width: 100%; 
+    padding: 0 15px;
+  }
+  .pregunta-toggle {
+    font-size: 16px; 
+  }
+  .pregunta-detalles {
+    font-size: 14px; 
+  }
+
+  .pregunta-toggle span {
+    font-size: 20px;
+  }
+  .whatsapp-icon {
+    width: 30px;  
+    height: 30px;
+  }
+  
+  .btn-whatsapp {
+    font-size: 1em; 
+    padding: 10px 15px;
+  }
+
+
+
+}
+/* Responsividad para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .whatsapp-icon {
+    width: 24px;  
+    height: 24px;
+  }
+
+  .btn-whatsapp {
+    font-size: 0.9em; 
+    padding: 8px 12px;
+  }
+}

@@ -1,0 +1,151 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+  }
+  /* Mensaje de éxito */
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+  /* Mensaje corto debajo del botón */
+.info-message {
+    font-size: 0.9rem;
+    color: #787a7e;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  
+  
+  body, html {
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+  }
+  
+  /* Contenedor principal */
+  .form-container {
+    display: flex;
+    width: 85%;
+    max-width: 1000px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  /* Sección izquierda: formulario */
+  .left-section {
+    flex: 5;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .form-content {
+    width: 100%;
+  }
+  
+  .form-content h1 {
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    color: #333;
+    text-align: left;
+  }
+  
+  .input-group {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+  
+  .input-group input, .input-group select, .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  /* Botón de envío */
+  .btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #6c63ff;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-bottom: 18px;
+  }
+  
+  .btn-submit:hover {
+    background-color: #5753d1;
+    transform: translateY(-2px);
+  }
+  
+  /* Sección derecha: imagen */
+  .right-section {
+    flex: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .right-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 900px) {
+    .form-container {
+      flex-direction: column;
+      width: 95%;
+      margin: 20px auto;
+    }
+  
+    .left-section, .right-section {
+      flex: auto;
+    }
+  
+    .right-section {
+      height: 250px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .left-section {
+      padding: 25px;
+    }
+  
+    .form-content h1 {
+      font-size: 1.5rem;
+    }
+  
+    .btn-submit {
+      font-size: 1rem;
+    }
+  
+    .right-section {
+      height: 200px;
+    }
+  }

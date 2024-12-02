@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar Propietario</title>
+    <link rel="stylesheet" href="{% static 'css/registro_propietario.css' %}" />
+  </head>
+  <body>
+    <div class="form-container">
+      <!-- Sección izquierda: formulario -->
+      <div class="left-section">
+        <div class="form-content">
+          <h1>Registrar Propietario</h1>
+          <form method="post">
+            {% csrf_token %}
+            <div class="input-group">{{ form.as_p }}</div>
+            <button type="submit" class="btn-submit">Guardar</button>
+
+            <!-- Aquí agregamos el mensaje de éxito -->
+            {% if mensaje %}
+            <div class="success-message">
+              <p>{{ mensaje }}</p>
+            </div>
+            <!-- Script para ocultar el mensaje después de 5 segundos -->
+            <script>
+              setTimeout(function () {
+                document.querySelector(".success-message").style.display =
+                  "none";
+              }, 5000); // 5000 ms = 5 segundos
+            </script>
+            {% endif %}
+
+            <!-- Aquí agregamos el mensaje informativo -->
+            <p class="info-message">
+              Después de guardar la información del propietario, por favor haga
+              clic en 'Siguiente' para registrar los datos de su mascota y
+              completar el proceso.
+            </p>
+
+            <!-- Aquí agregamos el botón de Siguiente -->
+            <a href="{% url 'registrar_mascota' %}" class="btn-next"
+              >Siguiente</a
+            >
+          </form>
+        </div>
+      </div>
+
+      <!-- Sección derecha: imagen -->
+      <div class="right-section">
+        <img
+          src="{% static 'img/fondo_veterinaria.webp' %}"
+          alt="Fondo veterinaria"
+          class="background-image"
+        />
+      </div>
+    </div>
+  </body>
+</html>
